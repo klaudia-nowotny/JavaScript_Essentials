@@ -24,6 +24,22 @@ let functionLet = "I'm a block-scoped let";
 const functionConst = "I'm a block-scoped const";
 }
 show();
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+//console.log(functionVar); // Throws ReferenceError
+//console.log(functionLet); // Throws ReferenceError
+//console.log(functionConst); // Throws ReferenceError
+{
+    var newBlockVar = "I am new block var";
+    let newBlockLet = "I am new block let";
+    const newBlockConst = "I am new block const";
+    newBlockVar = "newer var";
+    //newBlockConst = "newer const";
+    newBlockLet = "newer let";
+    console.log(newBlockVar);
+    console.log(newBlockLet);
+}
+newBlockVar = "new new var";
+console.log(newBlockVar);
+//newBlockLet = "new new let";
+//console.log(newBlockLet);
+//newBlockConst = "new new const";
+//console.log(newBlockConst);
